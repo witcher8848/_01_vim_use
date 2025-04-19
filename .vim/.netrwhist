@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/ICer/.vim/myinitvim'
+let g:netrw_dirhist_6='/home/ICer/.vim/bundle/vim-snippets/snippets'
+let g:netrw_dirhist_5='/home/ICer/.vim/bundle/tagbar/syntax'
+let g:netrw_dirhist_4='/home/ICer/.vim/bundle/tagbar'
+let g:netrw_dirhist_3='/home'
+let g:netrw_dirhist_2='/home/ICer/.vim/bundle'
+let g:netrw_dirhist_1='/home/ICer'
+let g:netrw_dirhist_0='/home/ICer/.vim/plugin'
+let g:netrw_dirhist_9='/home/ICer/.vim'
+let g:netrw_dirhist_8='/home/ICer/.vim/myinitvim'

@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/ICer/.synopsys_icc2_gui/config'
+let g:netrw_dirhist_6='/home/ICer/.synopsys_icc2_gui'
+let g:netrw_dirhist_5='/home/ICer'
+let g:netrw_dirhist_4='/home/ICer/Project/_02_sky_design/_08_apb_sram/rtl'
+let g:netrw_dirhist_3='/home/ICer/Project/_02_sky_design/_90_fpga_proj/_01_key_led/_01_my_key_led/rtl'
+let g:netrw_dirhist_2='/home/ICer/Project/_02_sky_design/_90_fpga_proj/_01_key_led/_01_my_key_led'
+let g:netrw_dirhist_1='/home/ICer/Project/_02_sky_design/_90_fpga_proj/_01_key_led/_01_my_key_led/pattern'
+let g:netrw_dirhist_0='/home/ICer/Project/_02_sky_design/_90_fpga_proj/_01_key_led/_01_my_key_led/sim'
+let g:netrw_dirhist_9='/home/ICer/Project/_02_sky_design/_90_fpga_proj/_01_key_led/_01_my_key_led/pattern'
+let g:netrw_dirhist_8='/home/ICer/Project/_02_sky_design/_90_fpga_proj/_01_key_led/_01_my_key_led'

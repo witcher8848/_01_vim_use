@@ -1,0 +1,79 @@
+Command: /home/ICer/_00_myuse/_01_uvm_code/uvm-1.2/examples/simple/hello_world/./simv +UVM_VERBOSITY=UVM_LOW -l vcs.log -gui=verdi
+./simv +UVM_VERBOSITY=UVM_LOW -a vcs.log -sml=verdi +UVM_VERDI_TRACE=UVM_AWARE +fsdb+gate=off -ucli2Proc -ucli
+debImport "-i" "-simflow" "-dbdir" "./simv.daidir"
+srcTBInvokeSim
+verdiDockWidgetSetCurTab -dock windowDock_OneSearch
+verdiDockWidgetSetCurTab -dock widgetDock_<Message>
+srcAction -pos 3 0 -cmdMessage -win $_nTrace0
+srcTBInvokeSim
+Verdi>./simv +UVM_VERBOSITY=UVM_LOW -a vcs.log -sml=verdi +UVM_VERDI_TRACE=UVM_AWARE +fsdb+gate=off -ucli2Proc -ucli
+nsMsgSwitchTab -tab trace
+nsMsgSwitchTab -tab cmpl
+verdiSetFont -font "Bitstream Vera Sans" -size "14"
+verdiSetFont -monoFont "Courier" -monoFontSize "18"
+simSetInteractiveFsdbFile inter.fsdb
+simSetSvtbMode off
+srcSetPreference -filterPowerAwareInstruments off -profileTime off
+tbvSetPreference -dynamicDumpMDA 1 -dynamicDumpStruct 1 -dynamicDumpSystemCStruct \
+           1 -dynamicDumpSystemCPlain 1 -dynamicDumpSystemCFIFO 1
+verdiHideWindow -win $_InteractiveConsole_2
+simSetSimOpt -vcssv {+UVM_VERBOSITY=UVM_LOW -a vcs.log  -sml=verdi}
+srcHBSelect "uvm_pkg" -win $_nTrace1 -lib "work"
+srcSetScope -win $_nTrace1 "uvm_pkg" -delim "." -lib "work"
+srcHBSelect "uvm_pkg" -win $_nTrace1 -lib "work"
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 30 -pos 4 -win $_nTrace1
+srcAction -pos 30 4 10 -win $_nTrace1 -name "\"base/uvm_base.svh\"" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 43 -pos 4 -win $_nTrace1
+srcAction -pos 43 4 9 -win $_nTrace1 -name "\"base/uvm_queue.svh\"" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 35 -pos 15 -win $_nTrace1
+srcAction -pos 35 15 3 -win $_nTrace1 -name "uvm_object" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 45 -pos 8 -win $_nTrace1
+srcAction -pos 45 8 4 -win $_nTrace1 -name "uvm_void" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 81 -pos 7 -win $_nTrace1
+srcAction -pos 81 7 1 -win $_nTrace1 -name "reseed" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcSelect -win $_nTrace1 -range {798 819 1 1 148 1} -backward
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 808 -pos 1 -win $_nTrace1
+srcAction -pos 808 1 10 -win $_nTrace1 -name "this.srandom" -ctrlKey off
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcBackwardHistory -win $_nTrace1
+srcHBSelect "hello_world.mytop.super.tr_database.super.reseed" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 808 -pos 1 -win $_nTrace1
+srcAction -pos 808 1 9 -win $_nTrace1 -name "this.srandom" -ctrlKey off
+srcHBSelect "hello_world.mytop.super.tr_database" -win $_nTrace1
+srcSetScope -win $_nTrace1 "hello_world.mytop.super.tr_database.super" -delim "."
+srcHBSelect "hello_world.mytop.super.tr_database" -win $_nTrace1
+srcHBSelect "hello_world.mytop.super.tr_database.super.reseed" -win $_nTrace1
+srcSetScope -win $_nTrace1 "hello_world.mytop.super.tr_database.super.reseed" \
+           -delim "."
+srcHBSelect "hello_world.mytop.super.tr_database.super.reseed" -win $_nTrace1
+srcHBSelect "hello_world.mytop.super.tr_database" -win $_nTrace1
+srcHBSelect "hello_world.mytop.super.tr_database.super.reseed" -win $_nTrace1
+srcSetScope -win $_nTrace1 "hello_world.mytop.super.tr_database.super.reseed" \
+           -delim "."
+srcHBSelect "hello_world.mytop.super.tr_database.super.reseed" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 808 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 808 -pos 5 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 808 -pos 5 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -word -line 808 -pos 5 -win $_nTrace1
+srcAction -pos 808 5 6 -win $_nTrace1 -name "get_type_name" -ctrlKey off
+srcCloseWindow -win $_nTrace3
+debExit

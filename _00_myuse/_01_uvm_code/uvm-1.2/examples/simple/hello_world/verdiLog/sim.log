@@ -1,0 +1,36 @@
+Command: /home/ICer/_00_myuse/_01_uvm_code/uvm-1.2/examples/simple/hello_world/simv +UVM_VERBOSITY=UVM_LOW -sml=verdi +UVM_VERDI_TRACE=UVM_AWARE +fsdb+gate=off -ucli2Proc -ucli -l /home/ICer/_00_myuse/_01_uvm_code/uvm-1.2/examples/simple/hello_world/verdiLog/sim.log
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-1; Runtime version O-2018.09-1;  Apr 10 22:58 2025
+<slp!&*()_+>
+UVM_INFO ../../../src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+  ***********       IMPORTANT RELEASE NOTES         ************
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+<slb!&*()_+>---<sls!&*()_+>loc: -1<sls!&*()_+>src: ../../../src/base/uvm_report_server.svh<sls!&*()_+>line: 699<sls!&*()_+>time: 0 ns<sls!&*()_+>length: 0<sls!&*()_+>...<sls!&*()_+><sle!&*()_+>
+
+ucli% synUtils::getArch
+linux
+ucli% loaddl -simv libnovas.so LoadFSDBDumpCmd;LoadFSDBDumpCmd
+
+Error-[UCLI-LOADDL-INTERNAL] loaddl command Internal error.
+  Internal error in loaddl command : Load.
+  libnovas.so: cannot open shared object file: No such file or directory
+  Please contact vcs_support@synopsys.com or call 1-800-VERILOG.
+
+ucli% if {[catch {ucliCore::setFocus tool}]} {}
+
+ucli% 

@@ -1,0 +1,3 @@
+Command Line: /home/synopsys/verdi/Verdi_O-2018.09-SP2/platform/LINUXAMD64/bin/Novas -i -simflow -simBin ./simv -simDelim +UVM_VERBOSITY=UVM_LOW -a vcs.log
+uname(Linux IC_EDA 3.10.0-1160.53.1.el7.x86_64 #1 SMP Fri Jan 14 13:59:45 UTC 2022 x86_64)
+au time 3402.478962 24.822473 45.784405 delta 568107008 568107008 total 993198080 993198080

@@ -1,0 +1,59 @@
+@verdi rc file Version 1.0
+[General]
+saveDB = TRUE
+relativePath = FALSE
+saveSingleView = FALSE
+saveNWaveWinId = 
+VerdiVersion = Verdi_O-2018.09-SP2
+[KeyNote]
+Line1 = Automatic Backup 0
+Line2 = Save Open Database Information: Yes
+Line3 = Path Option: Absolute Paths
+Line4 = Windows Option: All Windows
+[TestBench]
+ConstrViewShow = 0
+InherViewShow = 0
+FSDBMsgShow = 0
+AnnotationShow = 0
+Console = FALSE
+powerDumped = 0
+[hb]
+viewport = 0 0 2558 1242 0 0 485 2556
+activeNode = "hello_world.mytop.super.tr_database.super.get_type_name"
+activeScope = "hello_world.mytop.tr_database.get_type_name"
+activeFile = "../../../src/base/uvm_object.svh#inc__uvm_pkg__24#"
+interactiveMode = False
+viewType = Source
+simulatorMode = False
+sourceBeginLine = 214
+baMode = False
+srcLineNum = True
+AutoWrap = True
+IdentifyFalseLogic = False
+syncSignal = False
+traceMode = Hierarchical
+showTraceInSchema = True
+paMode = False
+funcMode = False
+powerAwareAnnot = True
+amsAnnot = True
+traceCrossHier = True
+DnDtraceCrossHierOnly = True
+traceIncTopPort = False
+leadingZero = False
+signalPane = False
+Scope1 = "hello_world.mytop.tr_database.get_type_name"
+Scope2 = "hello_world.mytop.tr_database.reseed"
+Scope3 = "hello_world.mytop.tr_database"
+Scope4 = "uvm_pkg"
+Scope5 = "hello_world"
+multipleSelection = 1 219 7 0 0
+sdfCheckUndef = FALSE
+simFlow = FALSE
+[hb.design]
+importCmd = "-simflow" "-dbdir" "./simv.daidir" 
+invokeDir = /home/ICer/_00_myuse/_01_uvm_code/uvm-1.2/examples/simple/hello_world
+[hb.sourceTab.1]
+scope = hello_world.mytop.tr_database.get_type_name
+File = /home/ICer/_00_myuse/_01_uvm_code/uvm-1.2/src/base/uvm_object.svh#inc__uvm_pkg__24#
+Line = 215
