@@ -1,0 +1,11 @@
+[user]
+	name = liuhaojie
+	email = 1821427401@qq.com
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	last = log -1
+	plog = "log --graph --date=format:'%Y-%m-%d %H:%M:%S %A' --pretty=format:'%C(bold blue)commit: %C(bold red)%h %C(#00A89A)%d %n%C(bold blue)parent commit: %C(bold red)%p %n%C(bold blue)title: %C(#A477DB)%s  %n%C(bold blue)content: %C(#A477DB)%b %n%C(bold blue)author: %C(#1B92D6)%an <%ae> %n%C(bold blue)date: %C(#1B92D6)%ad %C(#4EAB00)(%ar) %n%n'"
