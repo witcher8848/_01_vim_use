@@ -1,20 +1,46 @@
+" file is large from 1MB
+let g:LargeFile = 1024 * 1024 * 1
+
+augroup LargeFile
+autocmd BufReadPre * let f=getfsize(expand("<afile>")) | if f > g:LargeFile || f == -2 | call LargeFile() | endif
+augroup END
+function LargeFile()
+" no syntax highlighting etc
+set eventignore+=FileType
+" save memory when other file is viewed
+setlocal bufhidden=unload
+" is read-only (write with :w new_filename)
+setlocal buftype=nowrite
+" no undo possible
+setlocal undolevels=-1
+" display message
+autocmd VimEnter *  echo "The file is larger than " . (g:LargeFile / 1024 ) . " MB, so some options are changed (see .vimrc for details)."
+endfunction
+autocmd BufNewfile,BufRead *.log        set filetype=conf | AnsiEsc
+"以上的配置文件中，当文件大于1MB，不启动语法高亮在内的一切附加功能
+
 " python 环境变量
-set pythonthreedll=libpython3.6m.so.1.0
+" set pythonthreedll=libpython3.6m.so.1.0
 if has('python3')
    endif 
-" colorscheme :desert leo  desertEx
-" colorscheme :desertEx
+"colorscheme :desert leo  desertEx
 colorscheme desert
+"big file may have error
 autocmd BufNewFile,BufRead *.sv set omnifunc=verilog_systemverilog#Complete
 autocmd BufNewFile,BufRead *.v set omnifunc=verilog_systemverilog#Complete
-
 "text config 
-set guifont=courier\ 10\ pitch\ 15.5 "Font type and size
-set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
-set termencoding=utf-8
 set encoding=utf-8
-set fenc=utf-8
-set fencs=utf-8,usc-bom,euc-jp,gb18030,gbk,gb2312,cp936,big－5         
+set guifont=courier\ 10\ pitch\ 15.5 "Font type and size
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,latin-1
+set termencoding=utf-8
+set fencs=utf-8,ucs-bom,euc-jp,gb18030,gbk,gb2312,cp936,big-5
+" set encoding=utf-8
+"
+" set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,big5,latin-1
+"
+" set guifont=Courier\ 10\ Pitch\ 12,Source\ Code\ Pro\ 12,YaHei\ Mono\ 12
+" set termencoding=utf-8
+" set fileencoding=utf-8
 set enc=utf-8
 set textwidth=0
 set modifiable
@@ -43,6 +69,7 @@ winpos 700 235
 "设置显示40行 108列
 set lines=40 columns=108
 
+set noswapfile
 "indent
 "filetype, 'indent on' is necessary for smartindent
 filetype on
@@ -51,7 +78,7 @@ filetype indent on
 
 "syntax
 " syntax on "syntax highlight
-syntax enable "syntax highlight
+syntax on "syntax highlight
 set showmatch "syntax match
 set matchtime=2
 
@@ -249,7 +276,7 @@ map <silent> <A-x> :call ToggleVExplorer()<CR>
 map <silent> <C-E> :call ToggleTExplorer()<CR>
 " Default to tree mode
 let g:netrw_liststyle = 3 
-nmap <F12> :NERDTreeToggle<CR>
+nmap <F11> :NERDTreeToggle<CR>
 
 " under this same with _02_vundle_setting ...
 " 04 ale plugin
@@ -306,11 +333,15 @@ source ~/.vim/myinitvim/_03_verilog_color_setting.vim
 " autocmd BufNewFile,BufRead *.sv set tags=~/_00_myuse/_01_uvm_code/uvm-1.2/tags_uvm
 set tags=./tags;,tags
 set tags+=~/_00_myuse/_01_uvm_code/uvm-1.2/src/tags;
+" set tags+=/path/tags;
+" set tags+=/path/ppn_par;
+" set tags+=/path/tags;
+" set tags+=/ic/proj/adamd/users/liukunsong.2198/gvim/.vim/tags/uvm_tags;
 let Tlist_Ctags_cmd='~/_00_myuse/_02_bin/_01_uctags/install_path/bin/ctags'
 nmap <F10> :TagbarToggle<CR>
 let g:tagbar_ctags_bin ='~/_00_myuse/_02_bin/_01_uctags/install_path/bin/ctags'
-let g:tagbar_type_verilog_systemverilog = {
-        \ 'ctagstype'   : 'SystemVerilog',
+let g:tagbar_type_verilog_systemverilog = { 
+     \ 'ctagstype'   : 'SystemVerilog',
         \ 'kinds'       : [
             \ 'b:blocks:1:1',
             \ 'c:constants:1:0',
@@ -345,3 +376,4 @@ let g:tagbar_type_verilog_systemverilog = {
             \ 'R' : 'property'
         \ },
     \ }
+
