@@ -143,3 +143,8 @@ chpwd() {
 # 打开文件浏览器
 alias fb='gio open .';
 alias gvim='/Applications/MacVim.app/Contents/bin/mvim '
+
+export PATH="~/_00_myuse/_02_bin/_01_uctags/install_path/bin/ctags:$PATH"
+alias update_ctags="~/_00_myuse/_02_bin/_01_uctags/install_path/bin/ctags --languages=SystemVerilog --fields=+iaS --extras=+q -R ."
+alias update_verilog_ctags="~/_00_myuse/_02_bin/_01_uctags/install_path/bin/ctags --languages+=verilog,SystemVerilog --fields=+iaS --extras=+q -R ."
+alias kill_gvim="pkill -u $(whoami) gvim"
