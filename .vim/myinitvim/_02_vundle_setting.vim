@@ -16,6 +16,8 @@ Plugin 'The-NERD-Tree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/vim-easy-align'
+"multi-row buffer explorer
+Plugin 'fholgado/minibufexpl.vim'
 
 " Track the engine.
 " Plugin 'SirVer/ultisnips'

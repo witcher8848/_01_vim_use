@@ -41,3 +41,15 @@ let g:airline_symbols.dirty='⚡'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#whitespace#symbol = '!'
 
+" ---- MiniBufExplorer: 多行 buffer 列表 ----
+" 标签放不下时按窗口宽度物理折成多行
+let g:miniBufExplTabWrap     = 1
+" buffer 列表窗口最多/最少占几行
+let g:miniBufExplMaxSize     = 4
+let g:miniBufExplMinSize     = 1
+" 贴边显示（固定在顶部）
+let g:miniBufExplSplitToEdge = 1
+" 光标在 NERDTree / MiniBufExplorer 等插件窗口时 \1~\9 不响应，避免 :b 冲掉插件窗口
+let g:airline#extensions#tabline#keymap_ignored_filetypes =
+    \ ['vimfiler', 'nerdtree', 'minibufexpl']
+
