@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/vimcdoc"]
 	path = .vim/bundle/vimcdoc
 	url = https://github.com/yianwillis/vimcdoc.git
+[submodule "_00_myuse/_02_bin/_01_uctags/ctags"]
+	path = _00_myuse/_02_bin/_01_uctags/ctags
+	url = https://github.com/universal-ctags/ctags.git
