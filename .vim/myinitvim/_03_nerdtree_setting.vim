@@ -19,3 +19,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " 改变nerdtree的箭头
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾' 
+
+" gvim 启动时自动打开 NERDTree（等同手动执行 :NERDTree）
+" 带文件参数启动时，焦点回到文件窗口；无参数时焦点在 NERDTree
+autocmd VimEnter * if has('gui_running') | NERDTree | if argc() > 0 | wincmd l | endif | endif
